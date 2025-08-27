@@ -1,6 +1,10 @@
 https://airtable.com/appRSkwfK4tGHPJqO/shrchmSdLoNcMpc6u/tbl1dM90vNx9iWU5c/viwBmYWPHr8HTKc28
 
-```markdown
+### Run the Pipeline with one Command: 
+
+make run ARGS="applicant_id"
+
+
 # Airtable Contractor System Documentation
 
 ## Overview
@@ -103,6 +107,8 @@ The system includes helper scripts to create Airtable forms for data entry:
 ```bash
 make forms-help
 ```
+
+
 
 ## Automation Workflows
 

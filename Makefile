@@ -174,3 +174,25 @@ open-airtable:
 	else \
 		python -c "import webbrowser; from decouple import config; webbrowser.open(f'https://airtable.com/{config(\"AIRTABLE_BASE_ID\", default=\"\")}')"; \
 	fi
+
+
+
+# Detect whether to use uv or plain python
+RUN = $(shell command -v uv >/dev/null 2>&1 && echo "uv run python" || echo "python")
+
+compress:
+	$(RUN) -m scripts.compress_json $(ARGS)
+
+decompress:
+	$(RUN) -m scripts.decompress_json $(ARGS)
+
+shortlist:
+	$(RUN) -m scripts.shortlist_candidates 
+
+evaluate:
+	$(RUN) -m scripts.llm_evaluation 
+
+# Run all in sequence
+run: compress decompress shortlist evaluate
+	@echo "✅ Pipeline finished successfully!"
+
