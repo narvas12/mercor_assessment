@@ -1,0 +1,10 @@
+line-length = 88
+select = ["E", "W", "F", "I", "C", "B", "UP"]
+ignore = []
+exclude = [".venv", "__pycache__", ".git", ".mypy_cache", ".pytest_cache"]
+
+[mccabe]
+max-complexity = 10
+
+[isort]
+known-first-party = ["config", "models", "scripts", "utils", "tests"]

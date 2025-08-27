@@ -1,0 +1,17 @@
+# Development dependencies
+ruff>=0.1.0
+mypy>=1.0.0
+pytest>=7.0.0
+pytest-cov>=4.0.0
+requests>=2.28.0
+python-dotenv>=0.19.0
+openai>=0.27.0
+anthropic>=0.5.0
+google-generativeai>=0.3.0
+PyPDF2>=3.0.0
+python-decouple>=3.8
+
+
+python-dotenv
+airtable-python-wrapper
+google-generativeai
